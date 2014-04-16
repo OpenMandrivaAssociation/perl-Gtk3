@@ -1,0 +1,25 @@
+--- a/lib/Gtk3.pm	2013-09-10 17:42:42.671927415 +0200
++++ b/lib/Gtk3.pm	2013-09-10 17:42:11.519530404 +0200
+@@ -20,6 +20,10 @@
+ my $_GDK_VERSION = '3.0';
+ my $_GDK_PACKAGE = 'Gtk3::Gdk';
+ 
++my $_GDK_X11_BASENAME = 'GdkX11';
++my $_GDK_X11_VERSION = '3.0';
++my $_GDK_X11_PACKAGE = 'Gtk3::GdkX11';
++
+ my $_GDK_PIXBUF_BASENAME = 'GdkPixbuf';
+ my $_GDK_PIXBUF_VERSION = '2.0';
+ my $_GDK_PIXBUF_PACKAGE = 'Gtk3::Gdk';
+@@ -208,6 +212,11 @@
+     reblessers => \%_GDK_REBLESSERS);
+ 
+   Glib::Object::Introspection->setup (
++    basename => $_GDK_X11_BASENAME,
++    version => $_GDK_X11_VERSION,
++    package => $_GDK_X11_PACKAGE);
++
++  Glib::Object::Introspection->setup (
+     basename => $_GDK_PIXBUF_BASENAME,
+     version => $_GDK_PIXBUF_VERSION,
+     package => $_GDK_PIXBUF_PACKAGE,

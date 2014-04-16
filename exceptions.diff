@@ -1,0 +1,20 @@
+--- ./lib/Gtk3.pm	2013-11-07 14:02:09.249273866 +0100
++++ ./lib/Gtk3.pm	2013-11-07 14:12:26.156791895 +0100
+@@ -275,6 +275,17 @@
+   Gtk3->export_to_level (1, @unknown_args);
+ }
+ 
++# Gtk3 invokes gtk_main directly so Glib->enable_exceptions3 is not enough:
++sub enable_exceptions {
++    require Glib;
++    Glib->enable_exceptions3;
++    my $old_main = \&Gtk3::main;
++    *Gtk3::main = sub {
++       $old_main->();
++       Glib->generic_exceptions_handler();
++    };
++}
++
+ # - Overrides --------------------------------------------------------------- #
+ 
+ sub Gtk3::CHECK_VERSION {
