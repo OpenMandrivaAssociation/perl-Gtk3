@@ -5,7 +5,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	1
+Release:	2
 
 Summary:	Perl module for the GTK+-3.x library
 License:	LGPLv2+
@@ -34,6 +34,7 @@ BuildRequires:	perl-Test-Simple
 BuildRequires:	typelib(Gtk) = 3.0
 Requires:	typelib(Gtk) = 3.0
 Requires:	typelib(Gdk) = 3.0
+Requires:	typelib(GdkX11) = 3.0
 Requires:	typelib(Pango) = 1.0
 # For exception handling:
 Requires:	perl(Glib) >= 1.302.0-6
