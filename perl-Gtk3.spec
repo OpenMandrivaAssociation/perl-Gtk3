@@ -1,11 +1,11 @@
 %define	modname	Gtk3
-%define	modver	0.016
+%define	modver	0.021
 
 %define	perl_glib_require 1.240
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	3
+Release:	1
 
 Summary:	Perl module for the GTK+-3.x library
 License:	LGPLv2+
@@ -24,11 +24,11 @@ BuildRequires:	perl(ExtUtils::MakeMaker) >= 6.300.0
 BuildRequires:	perl(Glib) >= 1.302.0-6
 BuildRequires:	perl(Glib::Object::Introspection) >= 0.9.0
 BuildRequires:	perl-devel
-BuildRequires:	perl-ExtUtils-Depends >= 0.300
-BuildRequires:	perl-ExtUtils-PkgConfig >= 1.03
-BuildRequires:	perl-Glib >= %perl_glib_require
-BuildRequires:	perl-Glib-Object-Introspection >= 0.002
-BuildRequires:	perl-Test-Simple
+BuildRequires:	perl(ExtUtils::Depends) >= 0.300
+BuildRequires:	perl(ExtUtils::PkgConfig) >= 1.03
+BuildRequires:	perl(Glib) >= %{perl_glib_require}
+BuildRequires:	perl(Glib::Object::Introspection) >= 0.002
+BuildRequires:	perl(Test::Simple)
 # for test suite:
 #BuildRequires:	x11-server-xvfb
 BuildRequires:	typelib(Gtk) = 3.0
