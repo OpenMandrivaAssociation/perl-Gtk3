@@ -5,7 +5,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	1
+Release:	2
 
 Summary:	Perl module for the GTK+-3.x library
 License:	LGPLv2+
