@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   Gtk3-0.021.tar.gz: 56c45e951cc98bd07b3b9315d78f8aee24fdfcff
+sources:
+  Gtk3-0.023.tar.gz: fdbdc322afb37235136120e472a5044ffdbc8b71
