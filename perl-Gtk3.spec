@@ -1,5 +1,5 @@
 %define	modname	Gtk3
-%define	modver	0.023
+%define	modver	0.026
 
 %define	perl_glib_require 1.240
 
