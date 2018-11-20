@@ -3,7 +3,7 @@
 
 %define	perl_glib_require 1.240
 
-%define __noautoreq perl\\(Test::Simple\\)
+%global __requires_exclude %{?__requires_exclude:%__requires_exclude|}perl\\(Test::Simple\\)
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
@@ -46,7 +46,8 @@ interfaces for the X Window System.  GTK+ was originally written for the GIMP
 several other programs as well.
 
 %prep
-%autosetup -n %{modname}-%{modver} -p1
+%setup -n %{modname}-%{modver}
+%autopatch -p1
 
 rm -f lib/Gtk3.pm.*
 perl Makefile.PL INSTALLDIRS=vendor
