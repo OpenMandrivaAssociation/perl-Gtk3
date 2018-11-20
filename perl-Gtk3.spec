@@ -1,5 +1,5 @@
 %define	modname	Gtk3
-%define	modver	0.033
+%define	modver	0.034
 
 %define	perl_glib_require 1.240
 
@@ -7,7 +7,7 @@
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	2
+Release:	1
 
 Summary:	Perl module for the GTK+-3.x library
 License:	LGPLv2+
@@ -46,16 +46,16 @@ interfaces for the X Window System.  GTK+ was originally written for the GIMP
 several other programs as well.
 
 %prep
-%setup -q -n %{modname}-%{modver}
-%apply_patches
+%autosetup -n %{modname}-%{modver} -p1
+
 rm -f lib/Gtk3.pm.*
 perl Makefile.PL INSTALLDIRS=vendor
 
 %build
-%make OPTIMIZE="%{optflags}"
+%make_build OPTIMIZE="%{optflags}"
 
 %install
-%makeinstall_std
+%make_install
 
 %check
 # (TV) Test suite won't work in iurt (not enough stuff configured):
