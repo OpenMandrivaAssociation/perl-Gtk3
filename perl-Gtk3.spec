@@ -46,7 +46,7 @@ interfaces for the X Window System.  GTK+ was originally written for the GIMP
 several other programs as well.
 
 %prep
-%setup -n %{modname}-%{modver}
+%setup -qn %{modname}-%{modver}
 %autopatch -p1
 
 rm -f lib/Gtk3.pm.*
