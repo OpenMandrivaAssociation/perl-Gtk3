@@ -1,6 +1,6 @@
 --- ./lib/Gtk3.pm	2013-11-07 14:02:09.249273866 +0100
 +++ ./lib/Gtk3.pm	2013-11-07 14:12:26.156791895 +0100
-@@ -505,6 +505,17 @@ sub import {
+@@ -503,6 +505,17 @@ sub import {
    Gtk3->export_to_level (1, @unknown_args);
  }
  
@@ -17,4 +17,4 @@
 +
  # - Overrides --------------------------------------------------------------- #
  
- =item * For backwards compatibility, C<Gtk3::CHECK_VERSION>,
+ =item * For backwards compatibility, the functions C<Gtk3::get_version_info>
