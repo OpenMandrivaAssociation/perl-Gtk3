@@ -64,6 +64,6 @@ exit 0
 xvfb-run %make test
 
 %files
-%doc LICENSE META.yml MYMETA.yml NEWS README
+%doc LICENSE META.yml NEWS README
 %{perl_vendorlib}/%{modname}.pm
 %{_mandir}/*/*
