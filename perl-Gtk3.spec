@@ -1,5 +1,5 @@
 %define	modname	Gtk3
-%define	modver	0.035
+%define	modver	0.036
 
 %define	perl_glib_require 1.240
 
@@ -57,11 +57,6 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 %install
 %make_install
-
-%check
-# (TV) Test suite won't work in iurt (not enough stuff configured):
-exit 0
-xvfb-run %make test
 
 %files
 %doc LICENSE META.yml NEWS README
