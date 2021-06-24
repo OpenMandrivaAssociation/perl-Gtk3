@@ -1,13 +1,13 @@
-%define	modname	Gtk3
-%define	modver	0.037
+%define modname Gtk3
+%define modver 0.037
 
-%define	perl_glib_require 1.240
-
+%define perl_glib_require 1.240
+%{?perl_default_filter}
 %global __requires_exclude %{?__requires_exclude:%__requires_exclude|}perl\\(Test::Simple\\)
 
 Name:		perl-%{modname}
 Version:	%{perl_convert_version %{modver}}
-Release:	1
+Release:	2
 
 Summary:	Perl module for the GTK+-3.x library
 License:	LGPLv2+
