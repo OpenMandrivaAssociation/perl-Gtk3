@@ -12,7 +12,7 @@ Release:	3
 Summary:	Perl module for the GTK+-3.x library
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
-Url:		http://gtk2-perl.sf.net/
+Url:		https://gtk2-perl.sf.net/
 Source0:	http://prdownloads.sourceforge.net/gtk2-perl/%{modname}-%{modver}.tar.gz
 # helper for exception management:
 Patch1:		exceptions.diff
