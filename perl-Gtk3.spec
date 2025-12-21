@@ -21,6 +21,7 @@ Patch6:		GdkX11.diff
 
 BuildArch:	noarch
 
+BuildRequires:	make
 BuildRequires:	perl(Cairo::GObject) >= 1.0.0
 BuildRequires:	perl(ExtUtils::MakeMaker) >= 6.300.0
 BuildRequires:	perl(Glib) >= 1.302.0-6
