@@ -1,19 +1,17 @@
 %define modname Gtk3
-%define modver 0.037
-
 %define perl_glib_require 1.240
 %{?perl_default_filter}
 %global __requires_exclude %{?__requires_exclude:%__requires_exclude|}perl\\(Test::Simple\\)
 
 Name:		perl-%{modname}
-Version:	%{perl_convert_version %{modver}}
-Release:	4
+Version:	0.037
+Release:	5
 
 Summary:	Perl module for the GTK+-3.x library
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 Url:		https://gtk2-perl.sf.net/
-Source0:	http://prdownloads.sourceforge.net/gtk2-perl/%{modname}-%{modver}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/gtk2-perl/%{modname}-%{version}.tar.gz
 # helper for exception management:
 Patch1:		exceptions.diff
 # set up GdkX11:
@@ -47,7 +45,7 @@ interfaces for the X Window System.  GTK+ was originally written for the GIMP
 several other programs as well.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%setup -qn %{modname}-%{version}
 %autopatch -p1
 
 rm -f lib/Gtk3.pm.*
